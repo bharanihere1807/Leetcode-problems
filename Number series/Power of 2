@@ -1,0 +1,17 @@
+bool isPowerOfTwo(int n) {
+    if(n==1){
+        return 1; 
+    }
+    while(n!=0){
+        if(n%2!=0){
+            return 0;  //if reminder not equal to 0 return false
+            break;
+        }
+        n=n/2;     // break the next part
+    
+        if(n==1){
+            return 1;  // if last n ==1 return true
+        }
+    }
+        return 0;
+}
