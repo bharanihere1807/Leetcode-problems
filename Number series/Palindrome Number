@@ -1,0 +1,20 @@
+bool isPalindrome(int x) {
+   long int rev=0;  // to avoid overflow
+    int rem=0;
+    int k =x;    // k is for carrying reverse process
+    if(k<0){
+        return 0;   // if it is negative no palindrome
+    }
+    
+    while(k!=0){
+        rem = k%10;    // tracks the last digit of number;
+        rev= rev*10 +rem;  // retaining the number with rem;
+        k=k/10;      // reduces the retained digits
+    }
+    if(x==rev){
+        return 1;   // checks with orginal number and final reverse
+    }
+    else{
+        return 0;
+    }
+}
