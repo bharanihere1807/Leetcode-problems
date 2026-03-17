@@ -1,0 +1,7 @@
+int mySqrt(int x) {
+    long int i =1;  // initialize
+    while(i*i<=x){   // check square of value with respect to x
+        i++;
+    }
+    return i-1;  // return the value i-1
+}
