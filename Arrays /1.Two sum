@@ -1,0 +1,17 @@
+int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+    static int arr[2];
+
+    for(int i = 0; i < numsSize; i++) {     //starting at zero index
+        for(int j = i + 1; j < numsSize; j++) {  // starting at first index
+            if(nums[i] + nums[j] == target) {  // check sum matches target
+                arr[0] = i;
+                arr[1] = j;
+                *returnSize = 2;  // telling the size
+                return arr;
+            }
+        }
+    }
+
+    *returnSize = 0;
+    return arr;
+}
